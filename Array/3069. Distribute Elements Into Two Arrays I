@@ -1,0 +1,59 @@
+/*
+You are given a 1-indexed array of distinct integers nums of length n.
+
+You need to distribute all the elements of nums between two arrays arr1 and arr2 using n operations. In the first operation, append nums[1] to arr1. In the second operation, append nums[2] to arr2. Afterwards, in the ith operation:
+
+If the last element of arr1 is greater than the last element of arr2, append nums[i] to arr1. Otherwise, append nums[i] to arr2.
+The array result is formed by concatenating the arrays arr1 and arr2. For example, if arr1 == [1,2,3] and arr2 == [4,5,6], then result = [1,2,3,4,5,6].
+
+Return the array result.
+
+Example 1:
+
+Input: nums = [2,1,3]
+Output: [2,3,1]
+Explanation: After the first 2 operations, arr1 = [2] and arr2 = [1].
+In the 3rd operation, as the last element of arr1 is greater than the last element of arr2 (2 > 1), append nums[3] to arr1.
+After 3 operations, arr1 = [2,3] and arr2 = [1].
+Hence, the array result formed by concatenation is [2,3,1].
+*/
+
+
+class Solution {
+public:
+    vector<int> resultArray(vector<int>& nums) {
+        int n = nums.size();
+        vector <int> arr1;
+        vector <int> arr2;
+        arr1.push_back(nums[0]);
+        arr2.push_back(nums[1]);
+        for(int i=2; i<n; i++){
+            if(arr1.back()> arr2.back()){
+                arr1.push_back(nums[i]);
+            }else{
+                arr2.push_back(nums[i]);
+            }
+        }
+        arr1.insert(arr1.end(), arr2.begin(), arr2.end());
+        return arr1;
+    }
+};
+
+
+
+/*
+1. Initialization:
+Aapne 2 empty vectors banaye: arr1 aur arr2.
+Array ka first element (nums[0]) arr1 mein push kiya aur second element (nums[1]) arr2 mein push kiya.
+
+2. Simulation Loop:
+Loop ko index i = 2 se start karke n - 1 tak chalaya.
+Har step par aap check kar rahe ho ki arr1.back() (yaani arr1 ka last element) arr2.back() se bada hai ya nahi:
+
+If arr1.back() > arr2.back(): Current element nums[i] ko arr1 mein daal diya.
+Else: Current element nums[i] ko arr2 mein daal diya.
+
+3. Concatenation & Return:
+End mein arr1.insert() ka use karke arr2 ke saare elements ko arr1 ke peeche append kar diya.
+Output array arr1 return kar diya.
+*/
