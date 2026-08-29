@@ -1,0 +1,82 @@
+/*
+Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.
+Implement the MinStack class:
+MinStack() initializes the stack object.
+void push(int value) pushes the element value onto the stack.
+void pop() removes the element on the top of the stack.
+int top() gets the top element of the stack.
+int getMin() retrieves the minimum element in the stack.
+You must implement a solution with O(1) time complexity for each function.
+
+ 
+Example 1:
+
+Input
+["MinStack","push","push","push","getMin","pop","top","getMin"]
+[[],[-2],[0],[-3],[],[],[],[]]
+
+Output
+[null,null,null,null,-3,null,0,-2]
+
+Explanation
+MinStack minStack = new MinStack();
+minStack.push(-2);
+minStack.push(0);
+minStack.push(-3);
+minStack.getMin(); // return -3
+minStack.pop();
+minStack.top();    // return 0
+minStack.getMin(); // return -2
+*/
+
+
+class MinStack {
+public:
+    stack<int> st;
+    stack<int> minst;
+    MinStack() {
+    }
+    
+    void push(int value) {
+        
+        if(minst.empty() ||minst.top() >= value){
+            minst.push(value);
+        }else{
+            minst.push(minst.top());
+        }
+        st.push(value);
+    }
+    
+    void pop() {
+        
+            st.pop();
+            minst.pop();
+        
+    }
+    
+    int top() {
+        return st.top();
+    }
+    
+    int getMin() {
+        return minst.top();
+    }
+};
+
+/*
+1. Data Members:
+st: Main stack jo sare actual values ko standard Order of LIFO mein store karta hai.
+minst: Auxiliary stack jo har point par base se top tak ke minimum value ko preserve karta hai.
+
+2. push(value):
+If minst empty hai ya naya value existing minst.top() se chhota/equal hai (value <= minst.top()), to minst mein naya value push hota hai.
+Agar naya value bada hai, to minst apne current top element ko hi dubara duplicate karke push kar deta hai (minst.push(minst.top())).
+End mein actual value main stack st mein push hota hai. Is tarah dono stacks ki size hamesha sync rehti hai.
+
+3. pop():
+Dono stacks (st aur minst) se top element ko ek saath remove kar diya jata hai. Isse stack state revert hone par current minimum automatically restore ho jata hai.
+
+4. top() & getMin():
+top() direct st.top() return karta hai.
+getMin() direct minst.top() return karta hai bina kisi traversal ke.
+*/
