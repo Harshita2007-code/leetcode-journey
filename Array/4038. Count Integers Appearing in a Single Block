@@ -1,0 +1,48 @@
+/*
+You are given an integer array nums.
+An integer x is special if all occurrences of x in nums appear in a single contiguous block.
+Return the number of distinct special integers in nums.
+ 
+
+Example 1:
+
+Input: nums = [1,2,2,1]
+Output: 1
+
+Explanation:
+
+1 appears at indices 0 and 3, forming two separate blocks, so it is not special.
+2 appears in a single contiguous block at indices [1, 2], so it is special.
+Therefore, there is one special integer.
+*/
+
+
+
+class Solution {
+public:
+    int countSpecialIntegers(vector<int>& nums) {
+        int n = nums.size();
+        int count =0;
+        unordered_map <int, int> freq;
+        for(int i=0; i<n; i++){
+            if(i==0 || nums[i]!=nums[i-1]){
+                freq[nums[i]]++;
+            }
+        }
+        for(int i=0; i<freq.size(); i++){
+            if(freq[i]==1)
+                count++;
+        }
+        return count;
+    }
+};
+
+
+
+/*
+1. array par loop chala kar check kar rahe h ki kab naya block start hota hai (i == 0 || nums[i] != nums[i-1]).
+
+2. Jab bhi naya block start hota hai, freq[nums[i]]++ karke us number ke total blocks count kar rahe h.
+
+Logic: Agar koi number single contiguous block mein hoga, toh uske total blocks ki frequency 1 honi chahiye.
+*/
