@@ -2,37 +2,43 @@
 
 Welcome to my **[leetcode-journey](https://github.com/Harshita2007-code/leetcode-journey)** repository! 
 
-This repository serves as a personal log of my Data Structures and Algorithms (DSA) practice. Here, I track and document LeetCode problems that required **multiple attempts**, **AI assistance**, or **in-depth revision**, along with detailed notes on common pitfalls and key logic breakdowns.
+This repository serves as a comprehensive log of my Data Structures and Algorithms (DSA) journey, containing solution files and notes for all the problems I have successfully solved and submitted on LeetCode.
 
 ---
 
-## 📌 Motivation & Purpose
+## 📌 Purpose & Objectives
 
-Solving LeetCode is not just about getting an **"Accepted"** verdict—it's about understanding *why* an initial approach failed and retaining the core concepts. 
+Consistently solving LeetCode problems helps build algorithmic thinking and prepares me for technical interviews. This repository is dedicated to:
 
-This repository is dedicated to:
-* 🔁 Tracking problems I couldn't solve on the 1st attempt.
-* 🤖 Documenting AI-assisted insights, optimized approaches, and logic explanations.
-* ⚠️ Cataloging edge cases, time/space complexity tradeoffs, and personal mistakes.
-* 📝 Building a quick-revision module before technical interviews.
-
----
-
-## 📁 Repository Structure
-
-The solutions and notes are categorized by topic:
-
-```text
-leetcode-journey/
-├── Array/        # Array manipulation, Two Pointers, Sliding Window, Prefix Sum
-├── String/       # Pattern matching, Parsing, String Manipulation
-├── stack&queue/  # Monotonic Stacks, Queues, Expression Parsing
-└── README.md     # Documentation & Overview
-```
+- 🎯 **Tracking Progress:** Keeping a structured record of every successfully accepted submission on LeetCode.
+- 💡 **Documenting Logic:** Capturing intuition, optimal time/space complexity tradeoffs, and key logic breakdowns.
+- ⚠️ **Reviewing Edge Cases:** Cataloging common pitfalls, edge cases, and mistakes to avoid in future problems.
+- 📝 **Quick Revision:** Serving as a personal cheat sheet for rapid revision before interviews and technical tests.
 
 ---
 
-## STATS (QUESTION NEEDED AI HELP TO SOLVE)
+## 📊 Difficulty Breakdown
 
-EASY - 10
-MEDIUM - 4
+| Difficulty | Badge / Status |
+| :--- | :--- |
+| **Easy** | ![Easy](https://img.shields.io/badge/LeetCode-Easy-brightgreen?style=for-the-badge) |
+| **Medium** | ![Medium](https://img.shields.io/badge/LeetCode-Medium-orange?style=for-the-badge) |
+| **Hard** | ![Hard](https://img.shields.io/badge/LeetCode-Hard-red?style=for-the-badge) |
+
+---
+
+> 💡 *The stats card at the top automatically updates live as I solve and submit new problems on my [LeetCode Profile](https://leetcode.com/Harshita2007-code).*
+
+## 🛠️ Tech & Tools
+
+- **Primary Language:** C++ / JavaScript
+- **Platform:** [LeetCode](https://leetcode.com/)
+- **IDE / Environment:** VS Code / GitHub Codespaces
+
+---
+
+## 👩‍💻 Author
+
+**Harshita Bhardwaj**  
+- GitHub: [@Harshita2007-code](https://github.com/Harshita2007-code)  
+- LinkedIn: [Harshita Bhardwaj](https://www.linkedin.com/in/harshita-bhardwaj-37848a419)
