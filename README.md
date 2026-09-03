@@ -28,3 +28,11 @@ leetcode-journey/
 ├── String/       # Pattern matching, Parsing, String Manipulation
 ├── stack&queue/  # Monotonic Stacks, Queues, Expression Parsing
 └── README.md     # Documentation & Overview
+```
+
+---
+
+## STATS (QUESTION NEEDED AI HELP TO SOLVE)
+
+EASY - 10
+MEDIUM - 4
