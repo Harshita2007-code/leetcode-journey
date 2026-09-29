@@ -7,7 +7,7 @@ public:
             int temp = i;
             while(temp >0){
                 int d = temp % 10;
-                if(d==0 ||(i%d!=0 && d!=0 )){
+                if(d==0 ||i%d!=0 ){
                     found = false;
                 }
                 temp /= 10;
