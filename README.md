@@ -21,9 +21,9 @@ Consistently solving LeetCode problems helps build algorithmic thinking and prep
 
 | Difficulty | Badge / Status |
 | :--- | :--- |
-| **Easy** | ![Easy](https://img.shields.io/badge/LeetCode-Easy-brightgreen?style=for-the-badge) -> 53 problems|
+| **Easy** | ![Easy](https://img.shields.io/badge/LeetCode-Easy-brightgreen?style=for-the-badge) -> 54 problems|
 | **Medium** | ![Medium](https://img.shields.io/badge/LeetCode-Medium-orange?style=for-the-badge) -> 11 problems|
-| **Hard** | ![Hard](https://img.shields.io/badge/LeetCode-Hard-red?style=for-the-badge) |
+| **Hard** | ![Hard](https://img.shields.io/badge/LeetCode-Hard-red?style=for-the-badge) -> 1 problems|
 
 ---
 
